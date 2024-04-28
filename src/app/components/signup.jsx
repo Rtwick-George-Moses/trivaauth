@@ -333,10 +333,10 @@ export default function Signup() {
                   <div className="mx-auto max-w-lg text-center">
                     <p className="p-3 text-lg">whats your take </p>
                     <p className="bg-amber-50 py-8   rounded-xl text-gray-700 text-center">
-                      {JSON.stringify(
-                        array_prompt.filter((item) => item.Id == prompt)[0]
-                          .option
-                      )}
+                      {prompt
+                        ? array_prompt.filter((item) => item.Id == prompt)[0]
+                            .option
+                        : " no prompt selected"}
                     </p>
                   </div>
 

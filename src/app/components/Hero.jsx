@@ -79,7 +79,7 @@ const Hero = () => {
                     <WiTornado />
                   </div>
                   <div className="flex items-center justify-center text-3xl font-bold text-true-gray-800">
-                    TrivaAuth
+                    TriviaAuth
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center">
