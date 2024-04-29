@@ -1,6 +1,11 @@
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+
+{
+  EnvelopeIcon;
+}
 export default function Header() {
   return (
-    <header className="bg-gray-50">
+    <header className="bg-gray-100">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="text-center sm:text-left">
@@ -16,7 +21,7 @@ export default function Header() {
           <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
             <a
               href="https://www.linkedin.com/in/rtwick-g-moses/"
-              className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring"
+              className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-500 transition hover:text-gray-700"
             >
               <span className="text-sm font-medium"> View LinkedIn </span>
 
@@ -38,10 +43,11 @@ export default function Header() {
 
             <a
               href="mailto: rtwick612@gmail.com"
-              className="block rounded-lg bg-orange-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-orange-700 "
+              className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 bg-orange-600 px-5 py-3 text-white transition hover:text-gray-200 "
               type="button"
             >
-              Email
+              <span className="text-sm font-medium"> Email </span>
+              <EnvelopeIcon className="h-4 w-4" />
             </a>
           </div>
         </div>
