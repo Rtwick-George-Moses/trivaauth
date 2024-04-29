@@ -14,14 +14,12 @@ export default function Signup() {
     { option: "JSX is polarizing but powerful", Id: 2 },
     { option: "State management is a wild west", Id: 3 },
     { option: "Function components are the future", Id: 4 },
-    { option: "Virtual DOM isn't the only answer", Id: 5 },
   ];
   const array_sections = [
     { option: "Reactjs", Id: 1 },
     { option: "Angular", Id: 2 },
     { option: "Vue", Id: 3 },
     { option: "Solidjs", Id: 4 },
-    { option: "Svelt", Id: 5 },
   ];
   const [activeStep, setActiveStep] = React.useState(0);
   const [isLastStep, setIsLastStep] = React.useState(false);
@@ -100,7 +98,7 @@ export default function Signup() {
                 cx="364.43401"
                 cy="261.50202"
                 r="24.45"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <path
                 id="bbe451c3-febc-41ba-8083-4c8307a2e73e"
@@ -124,7 +122,7 @@ export default function Signup() {
                 cx="225.46401"
                 cy="427.41999"
                 r="6.902"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <rect
                 id="ff33d889-4c74-4b91-85ef-b4882cc8fe76"
@@ -141,12 +139,12 @@ export default function Signup() {
                 cx="225.46401"
                 cy="496.43702"
                 r="6.902"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <path
                 d="M660.69043,671.17188H591.62207a4.50493,4.50493,0,0,1-4.5-4.5v-24.208a4.50492,4.50492,0,0,1,4.5-4.5h69.06836a4.50491,4.50491,0,0,1,4.5,4.5v24.208A4.50492,4.50492,0,0,1,660.69043,671.17188Z"
                 transform="translate(-227.576 -76.46149)"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <circle
                 id="e12ee00d-aa4a-4413-a013-11d20b7f97f7"
@@ -154,7 +152,7 @@ export default function Signup() {
                 cx="247.97799"
                 cy="427.41999"
                 r="6.902"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <circle
                 id="f58f497e-6949-45c8-be5f-eee2aa0f6586"
@@ -162,7 +160,7 @@ export default function Signup() {
                 cx="270.492"
                 cy="427.41999"
                 r="6.902"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <circle
                 id="b4d4939a-c6e6-4f4d-ba6c-e8b05485017d"
@@ -170,7 +168,7 @@ export default function Signup() {
                 cx="247.97799"
                 cy="496.43702"
                 r="6.902"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <circle
                 id="aff120b1-519b-4e96-ac87-836aa55663de"
@@ -178,7 +176,7 @@ export default function Signup() {
                 cx="270.492"
                 cy="496.43702"
                 r="6.902"
-                fill="#7c3aed"
+                fill="#6b21a8"
               />
               <path
                 id="f1094013-1297-477a-ac57-08eac07c4bd5"
@@ -272,95 +270,101 @@ export default function Signup() {
                   <CogIcon className="h-5 w-5" />
                 </Step>
               </Stepper>
-              {activeStep == 0 ? (
-                <div className="mx-auto max-w-screen-xl h-100 px-4 py-3 sm:px-6 lg:px-8">
-                  <div className="mx-auto max-w-lg text-center">
-                    <p className="p-3 text-lg">Pick a category </p>
-                  </div>
-                  {array_sections.map(({ option, Id }) => (
-                    <a onClick={() => setcategory(Id)}>
-                      <div
-                        className={`each flex hover:shadow select-none p-3 rounded-md border-gray-300 ${
-                          category == Id
-                            ? "bg-purple-50 border-solid border-2 border-purple-200 "
-                            : "bg-white"
-                        } border mb-3 cursor-pointer`}
-                      >
-                        <div className="left">
-                          <div className="header text-gray-600  ">{option}</div>
-                        </div>
-                        <div className="right m-auto mr-0 text-purple-700 ">
-                          {category == Id ? (
-                            <CheckCircleIcon className="h-8" />
-                          ) : (
-                            <div className="h-8" />
-                          )}
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              ) : activeStep == 1 ? (
-                <div className="mx-auto max-w-screen-xl  px-4 py-3 h-100 sm:px-6 lg:px-8">
-                  <div className="mx-auto max-w-lg text-center">
-                    <p className="p-3 text-lg">Pick a hot take </p>
-                  </div>
-                  {array_prompt.map(({ option, Id }) => (
-                    <a onClick={() => setPrompt(Id)}>
-                      <div
-                        className={`each flex hover:shadow select-none p-3 rounded-md border-gray-300 ${
-                          prompt == Id
-                            ? "bg-orange-50 border-solid border-2 border-orange-200 "
-                            : "bg-white"
-                        } border mb-3 cursor-pointer`}
-                      >
-                        <div className="left">
-                          <div className="header text-gray-600  ">{option}</div>
-                        </div>
-                        <div className="right m-auto mr-0 text-orange-700 ">
-                          {prompt == Id ? (
-                            <CheckCircleIcon className="h-8" />
-                          ) : (
-                            <div className="h-8" />
-                          )}
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              ) : (
-                <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-2 lg:px-8">
-                  <div className="mx-auto max-w-lg text-center">
-                    <p className="p-3 text-lg">whats your take </p>
-                    <p className="bg-amber-50 py-8   rounded-xl text-gray-700 text-center">
-                      {prompt
-                        ? array_prompt.filter((item) => item.Id == prompt)[0]
-                            .option
-                        : " no prompt selected"}
-                    </p>
-                  </div>
-
-                  <form
-                    action="#"
-                    className="mx-auto mb-0 mt-8 max-w-md space-y-4"
-                  >
-                    <div>
-                      <div className="relative p-3 ">
-                        <Textarea
-                          variant="outlined"
-                          label="Respond wildly"
-                          className="bg-white h-10"
-                        />
-                        <ul class="list-disc list-inside p-3">
-                          <li>Keep it to 10 words.</li>
-                          <li>have a strong opinion.</li>
-                          <li>be random if you want.</li>
-                        </ul>
-                      </div>
+              <div className="mx-auto max-w-screen-xl h-96 px-4 py-3 sm:px-6 lg:px-8">
+                {activeStep == 0 ? (
+                  <div className="">
+                    <div className="mx-auto max-w-lg text-center">
+                      <p className="p-3 text-lg">Pick a category </p>
                     </div>
-                  </form>
-                </div>
-              )}
+                    {array_sections.map(({ option, Id }) => (
+                      <a onClick={() => setcategory(Id)}>
+                        <div
+                          className={`each flex hover:shadow select-none p-3 rounded-md border-gray-300 ${
+                            category == Id
+                              ? "bg-purple-50 border-solid border-2 border-purple-200 "
+                              : "bg-white"
+                          } border mb-3 cursor-pointer`}
+                        >
+                          <div className="left">
+                            <div className="header text-gray-600  ">
+                              {option}
+                            </div>
+                          </div>
+                          <div className="right m-auto mr-0 text-purple-700 ">
+                            {category == Id ? (
+                              <CheckCircleIcon className="h-8" />
+                            ) : (
+                              <div className="h-8" />
+                            )}
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                ) : activeStep == 1 ? (
+                  <div className="">
+                    <div className="mx-auto max-w-lg text-center">
+                      <p className="p-3 text-lg">Pick a hot take </p>
+                    </div>
+                    {array_prompt.map(({ option, Id }) => (
+                      <a onClick={() => setPrompt(Id)}>
+                        <div
+                          className={`each flex hover:shadow select-none p-3 rounded-md border-gray-300 ${
+                            prompt == Id
+                              ? "bg-orange-50 border-solid border-2 border-orange-200 "
+                              : "bg-white"
+                          } border mb-3 cursor-pointer`}
+                        >
+                          <div className="left">
+                            <div className="header text-gray-600  ">
+                              {option}
+                            </div>
+                          </div>
+                          <div className="right m-auto mr-0 text-orange-700 ">
+                            {prompt == Id ? (
+                              <CheckCircleIcon className="h-8" />
+                            ) : (
+                              <div className="h-8" />
+                            )}
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="">
+                    <div className="mx-auto max-w-lg text-center">
+                      <p className="p-3 text-lg">respond to the take </p>
+                      <p className="bg-amber-50 py-8   rounded-xl text-gray-700 text-center">
+                        {prompt
+                          ? array_prompt.filter((item) => item.Id == prompt)[0]
+                              .option
+                          : " no prompt selected"}
+                      </p>
+                    </div>
+
+                    <form
+                      action="#"
+                      className="mx-auto mb-0 mt-8 max-w-md space-y-4"
+                    >
+                      <div>
+                        <div className="relative ">
+                          <Textarea
+                            variant="outlined"
+                            label="Respond wildly"
+                            className="bg-white h-10"
+                          />
+                          <ul class="list-disc list-inside p-3">
+                            <li>Keep it to 10 words.</li>
+                            <li>have a strong opinion.</li>
+                            <li>be random if you want.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                )}
+              </div>
               <div className="mt-7 flex justify-between">
                 <Button onClick={handlePrev} disabled={isFirstStep}>
                   Prev

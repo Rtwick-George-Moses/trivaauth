@@ -75,7 +75,7 @@ const Hero = () => {
               {/* nav */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center justify-center">
-                  <div className="text-orange-800 text-3xl">
+                  <div className="text-purple-800 text-3xl">
                     <WiTornado />
                   </div>
                   <div className="flex items-center justify-center text-3xl font-bold text-true-gray-800">
@@ -106,7 +106,7 @@ const Hero = () => {
                       A better experience for your users and less stress for
                       you.
                     </div>
-                    <button className="mt-6 px-8 py-4 rounded-xl font-normal tracking-wide bg-orange-800  text-white outline-none focus:outline-none hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out">
+                    <button className="mt-6 px-8 py-4 rounded-xl font-normal tracking-wide bg-purple-700  text-white outline-none focus:outline-none hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out">
                       Try it now
                     </button>
                   </div>
