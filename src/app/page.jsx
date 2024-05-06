@@ -1,6 +1,7 @@
 import Signup from "./components/signup/signup";
 import Header from "./components/header";
 import Hero from "./components/Hero";
+
 export default function Home() {
   return (
     <div className=" dark:bg-neutral-700 ">
