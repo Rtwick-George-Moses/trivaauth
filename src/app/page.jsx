@@ -1,4 +1,4 @@
-import Signup from "./components/signup";
+import Signup from "./components/signup/signup";
 import Header from "./components/header";
 import Hero from "./components/Hero";
 export default function Home() {
