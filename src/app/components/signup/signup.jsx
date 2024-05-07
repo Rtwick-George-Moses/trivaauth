@@ -9,6 +9,9 @@ import {
   Select,
   Option,
 } from "@material-tailwind/react";
+import { useFormStatus } from "react-dom";
+
+import { ToastContainer, toast } from "react-toastify";
 import {
   CheckCircleIcon,
   SquaresPlusIcon,
@@ -94,6 +97,8 @@ export default function Signup() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [isLastStep, setIsLastStep] = React.useState(false);
   const [isFirstStep, setIsFirstStep] = React.useState(false);
+  const { pending } = useFormStatus();
+  const notify = () => toast.success("Submitting Data!");
 
   const [category, setcategory] = React.useState(null);
   const [prompt, setPrompt] = React.useState("");
@@ -109,6 +114,7 @@ export default function Signup() {
 
   return (
     <section className="mx-auto max-w-3xl py-20 h-4/6">
+      <ToastContainer />
       <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
         <div className="md:flex w-full">
           <div className="w-full md:w-full py-10 px-5 md:px-10">
@@ -269,8 +275,11 @@ export default function Signup() {
                     <input type="hidden" name="value" value={prompt} />
                     <Button
                       type="submit"
-                      onClick={handleNext}
-                      disabled={!(email && text)}
+                      onClick={(e) => {
+                        handleNext(e);
+                        notify();
+                      }}
+                      disabled={!(email && text) && pending}
                       className="flex items-center gap-3"
                     >
                       Submit
