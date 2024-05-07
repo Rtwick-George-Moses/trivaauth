@@ -1,5 +1,4 @@
 // mongodb.js
-"use server";
 
 import { MongoClient } from "mongodb";
 
