@@ -2,18 +2,16 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import clientPromise from "../mongodb";
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
-
-const Difference = (arr1, arr2) => {
-  const res = [];
-  for (let i = 0; i < arr1.length; i++) {
-    const el = arr1[i] - arr2[i];
-    res[i] = el;
-  }
-  return res;
-};
-
 export async function Convert(req) {
+  const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+  const Difference = (arr1, arr2) => {
+    const res = [];
+    for (let i = 0; i < arr1.length; i++) {
+      const el = arr1[i] - arr2[i];
+      res[i] = el;
+    }
+    return res;
+  };
   let obj = Object.fromEntries(req);
   let model_name = "embedding-001";
   let vec_length = 768;
@@ -48,4 +46,5 @@ export async function Convert(req) {
   } finally {
     //   await client.close();
   }
+  return "";
 }
