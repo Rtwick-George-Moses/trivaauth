@@ -1,5 +1,6 @@
 import Signup from "./components/signup/signup";
 import Header from "./components/header";
+import Datagrid from "./components/datagrid/grid_layout";
 import Hero from "./components/Hero";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <Signup />
       </div>
+      <Datagrid />
       <Header />
     </div>
   );

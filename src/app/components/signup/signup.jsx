@@ -18,6 +18,7 @@ import {
   StarIcon,
   PencilSquareIcon,
 } from "@heroicons/react/24/outline";
+import { MdLockOutline, MdLockOpen } from "react-icons/md";
 import { Convert } from "./data";
 
 export default function Signup() {
@@ -162,17 +163,34 @@ export default function Signup() {
                       <p className="text-center p-6 text-black">
                         Enter the username you want to protect.
                       </p>
-                      <div className="flex w-2/3 mx-auto bg-white">
+                      <div className="flex w-2/3 mx-auto ">
                         <Input
                           type="text"
                           label="Username "
                           value={email}
                           onChange={onChangeEmail}
-                          className="pr-30"
+                          className="pr-30 bg-white"
                           containerProps={{
                             className: "min-w-0",
                           }}
                         />
+                        <div className="px-1">
+                          <button
+                            layout
+                            whileHover={{
+                              scale: 1.1,
+                            }}
+                            whiletap={{ scale: 0.9 }}
+                            onClick={(e) => console.log(e)}
+                            className={`rounded uppercase items-center text-xl flex rounded font-medium transition ease-in-out   p-2 hover:scale-110  ${
+                              email
+                                ? " bg-teal-50 text-teal-500 dark:bg-teal-600 dark:text-teal-100"
+                                : " bg-amber-50 text-amber-500 dark:bg-amber-600 dark:text-amber-100"
+                            }`}
+                          >
+                            {email ? <MdLockOpen /> : <MdLockOutline />}
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
