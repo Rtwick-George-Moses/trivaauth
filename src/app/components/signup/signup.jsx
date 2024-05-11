@@ -10,7 +10,7 @@ import {
   Option,
 } from "@material-tailwind/react";
 import { useFormStatus } from "react-dom";
-
+import { FaCheckCircle } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import {
   CheckCircleIcon,
@@ -116,11 +116,18 @@ export default function Signup() {
   return (
     <section className="mx-auto max-w-3xl py-20 h-4/6">
       <ToastContainer />
-      <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
+      <div className="bg-gray-100  rounded-3xl shadow-xl w-full overflow-hidden">
         <div className="md:flex w-full">
           <div className="w-full md:w-full py-10 px-5 md:px-10">
             <div className="text-center mb-10">
-              <h1 className="font-bold text-3xl text-gray-900">TEST IT OUT</h1>
+              <div className="flex items-center justify-center p-10">
+                <div className="flex items-center  text-3xl font-bold text-true-gray-800">
+                  Test the System out
+                </div>
+                <div className="text-purple-800 text-3xl px-5">
+                  <FaCheckCircle />
+                </div>
+              </div>
               <p>take a stand</p>
             </div>
             <div className="w-full py-4 px-8">
@@ -161,7 +168,7 @@ export default function Signup() {
                         className="h-40  rounded-full mx-auto"
                       />
                       <p className="text-center p-6 text-black">
-                        Enter the username you want to protect.
+                        Enter the Email you want to Use.
                       </p>
                       <div className="flex w-2/3 mx-auto ">
                         <Input
