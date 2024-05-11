@@ -130,7 +130,9 @@ function row({ item }) {
       <td>
         {item.Model}
         <br />
-        <span className="badge badge-ghost badge-sm">Google</span>
+        <span className="badge badge-ghost badge-sm bg-amber-50 text-amber-500">
+          Google
+        </span>
       </td>
       <td className="">
         <button
@@ -196,7 +198,7 @@ function row({ item }) {
               ) : (
                 <></>
               )}
-              {category != null && prompt != null ? (
+              {category != null && prompt != "" ? (
                 <div className="">
                   <div className="mx-auto max-w-lg text-center p-2">
                     <p className="p-3 text-xl font-semibold text-gray-700  ">
