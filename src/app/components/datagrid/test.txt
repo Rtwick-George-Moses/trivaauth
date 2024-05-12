@@ -1,0 +1,7 @@
+name = sammy
+prompt = Design Systems Stifle Creativity and Lead to Homogenized Interfaces
+Response = No, it allows for developers to understand each other with a unified system with out needing to know the same script. 
+
+name = william
+prompt = JSX is polarizing but powerful
+Response = Absolutely not, its just functional in its approach to solving complex problems.

@@ -1,5 +1,5 @@
 "use client";
-import { MdLockOutline, MdDataArray } from "react-icons/md";
+import { MdLockOutline, MdLockOpen, MdDataArray } from "react-icons/md";
 import { FaDatabase } from "react-icons/fa";
 import {
   Button,
@@ -13,6 +13,8 @@ import {
 } from "@material-tailwind/react";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import React from "react";
+import { Validate } from "./data";
+import { ToastContainer, toast } from "react-toastify";
 
 const array_prompt = [
   [
@@ -91,8 +93,20 @@ function row({ item }) {
   const [prompt, setPrompt] = React.useState("");
   const [text, setText] = React.useState("");
   const [email, setEmail] = React.useState("");
-
+  const [locked, setLocked] = React.useState(false);
+  const updateData = Validate.bind();
   const handleOpen = () => setOpen(!open);
+
+  async function submit_form(e) {
+    const response = await Validate(e);
+    setLocked(response);
+    if (response == true) {
+      toast.success("congrats you are logged in!");
+    } else {
+      toast.error("Did not work!");
+    }
+  }
+
   return (
     <tr>
       <th>
@@ -103,7 +117,7 @@ function row({ item }) {
               scale: 1.1,
             }}
             whiletap={{ scale: 0.9 }}
-            className={`rounded uppercase items-center text-xl flex rounded font-medium transition ease-in-out   p-2 hover:scale-110  bg-amber-50 text-amber-500 dark:bg-amber-600 dark:text-amber-100`}
+            className={`rounded uppercase items-center text-xl flex rounded font-medium transition ease-in-out   p-2 hover:scale-110  bg-gray-50 text-gray-500 dark:bg-gray-600 dark:text-gray-100`}
           >
             <MdDataArray />
           </button>
@@ -142,9 +156,13 @@ function row({ item }) {
           }}
           whiletap={{ scale: 0.9 }}
           onClick={handleOpen}
-          className={`rounded uppercase items-center text-xl flex rounded font-medium transition ease-in-out   p-2 hover:scale-110  bg-cyan-50 text-cyan-500 dark:bg-cyan-600 dark:text-cyan-100`}
+          className={`rounded uppercase items-center text-xl flex rounded font-medium transition ease-in-out   p-2 hover:scale-110  ${
+            locked
+              ? " bg-teal-50 text-teal-500 dark:bg-teal-600 dark:text-teal-100"
+              : " bg-amber-50 text-amber-500 dark:bg-amber-600 dark:text-amber-100"
+          }`}
         >
-          <MdLockOutline />
+          {locked ? <MdLockOpen /> : <MdLockOutline />}
         </button>
         <Dialog open={open} handler={handleOpen}>
           <DialogBody>
@@ -244,14 +262,28 @@ function row({ item }) {
             >
               <span>close</span>
             </Button>
-            <Button
-              variant="gradient"
-              color="black"
-              onClick={handleOpen}
-              disabled={!text}
-            >
-              <span>submit</span>
-            </Button>
+            <form action={submit_form}>
+              <input type="hidden" name="temp_array" value={item.temp_array} />
+              <input
+                type="hidden"
+                name="stored_array"
+                value={item.stored_array}
+              />
+
+              <input type="hidden" name="response" value={text} />
+              <input type="hidden" name="value" value={prompt} />
+              <Button
+                variant="gradient"
+                color="black"
+                type="submit"
+                onClick={(e) => {
+                  console.log("checkingdata");
+                }}
+                disabled={!text}
+              >
+                <span>submit</span>
+              </Button>
+            </form>
           </DialogFooter>
         </Dialog>
       </td>
@@ -269,6 +301,7 @@ export default function Datagrid({ data }) {
   console.log(data);
   return (
     <div className="mx-auto max-w-7xl py-20">
+      <ToastContainer />
       <div className="flex items-center justify-center p-10">
         <div className="text-purple-800 text-3xl px-5">
           <FaDatabase />
