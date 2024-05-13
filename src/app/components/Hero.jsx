@@ -82,7 +82,7 @@ const Hero = () => {
                     TriviaAuth
                   </div>
                 </div>
-                <div className="hidden md:flex items-center justify-center">
+                <div className="hidden  items-center justify-center">
                   <a
                     href="#"
                     className="mr-5 text-lg font-medium text-orange-800 hover:text-gray-700 hover:bg-gray-200 px-6 py-3 rounded-3xl  transition duration-150 ease-in-out"
@@ -106,7 +106,7 @@ const Hero = () => {
                       A better experience for your users and less stress for
                       you.
                     </div>
-                    <button className="mt-6 px-8 py-4 rounded-xl font-normal tracking-wide bg-indigo-700  text-white outline-none focus:outline-none hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out">
+                    <button className=" hidden mt-6 px-8 py-4 rounded-xl font-normal tracking-wide bg-indigo-700  text-white outline-none focus:outline-none hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out">
                       Try it now
                     </button>
                   </div>

@@ -14,7 +14,8 @@ export default function Header() {
             </h1>
 
             <p className="mt-1.5 text-sm text-gray-500">
-              Here is how it looks for now! 🎉
+              Here is how it looks for now, test it out, if you like the concept
+              get in touch! 🎉
             </p>
           </div>
 
