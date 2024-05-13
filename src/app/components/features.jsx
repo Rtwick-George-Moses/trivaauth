@@ -72,6 +72,9 @@ export default function Feature() {
               width={2432}
               height={1442}
             />
+            <h2 className="text-lg text-gray-500 pt-10   text-center">
+              Just FYI, the video is stock footage, it looked cool.
+            </h2>
           </div>
         </div>
       </div>
