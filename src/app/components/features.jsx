@@ -65,13 +65,15 @@ export default function Feature() {
               </dl>
             </div>
           </div>
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/005/879/539/original/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg"
-            alt="Product screenshot"
-            className="w-[48rem] max-w-none rounded-xl shadow-xl shadow-orange-600  ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-            width={2432}
-            height={1442}
-          />
+          <div className="  content-center">
+            <img
+              src="https://assets.materialup.com/uploads/f7fb023a-1295-4be1-999c-27103aa6a2df/preview.gif"
+              alt="Product screenshot"
+              className="w-full max-w-none rounded-xl shadow-xl shadow-orange-600  ring-1 ring-gray-400/10  "
+              width={2432}
+              height={1442}
+            />
+          </div>
         </div>
       </div>
     </div>
