@@ -124,7 +124,7 @@ export default function Signup() {
                 <div className="flex items-center  text-3xl font-bold text-true-gray-800">
                   Test the System out
                 </div>
-                <div className="text-purple-800 text-3xl px-5">
+                <div className="text-indigo-800 text-3xl px-5">
                   <FaCheckCircle />
                 </div>
               </div>

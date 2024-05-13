@@ -5,3 +5,5 @@ Response = No, it allows for developers to understand each other with a unified 
 name = william
 prompt = JSX is polarizing but powerful
 Response = Absolutely not, its just functional in its approach to solving complex problems.
+
+No, REST is a tried and tested approach. 

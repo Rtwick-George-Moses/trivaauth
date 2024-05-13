@@ -64,7 +64,7 @@ const Hero = () => {
     <section className="">
       <div className="min-h-screen min-w-full flex flex-col justify-center p-10">
         <div className="relative w-full max-w-full lg:max-w-6xl xl:max-w-screen-2xl mx-auto">
-          <div className="absolute inset-0 -mr-3.5 bg-gradient-to-br from-purple-700 to-orange-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-3 sm:rounded-3xl"></div>
+          <div className="absolute inset-0 -mr-3.5 bg-gradient-to-br from-indigo-700 to-orange-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-3 sm:rounded-3xl"></div>
           <div className="relative bg-gray-100 shadow-lg sm:rounded-3xl">
             <div className="flex items-center justify-start pt-6 pl-6">
               <span className="w-3 h-3 bg-red-400 rounded-full mr-2"></span>
@@ -75,7 +75,7 @@ const Hero = () => {
               {/* nav */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center justify-center">
-                  <div className="text-purple-800 text-3xl">
+                  <div className="text-indigo-800 text-3xl">
                     <WiTornado />
                   </div>
                   <div className="flex items-center justify-center text-3xl font-bold text-true-gray-800">
@@ -106,7 +106,7 @@ const Hero = () => {
                       A better experience for your users and less stress for
                       you.
                     </div>
-                    <button className="mt-6 px-8 py-4 rounded-xl font-normal tracking-wide bg-purple-700  text-white outline-none focus:outline-none hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out">
+                    <button className="mt-6 px-8 py-4 rounded-xl font-normal tracking-wide bg-indigo-700  text-white outline-none focus:outline-none hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out">
                       Try it now
                     </button>
                   </div>

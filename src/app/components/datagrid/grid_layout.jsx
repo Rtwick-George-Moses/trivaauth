@@ -304,7 +304,7 @@ export default function Datagrid({ data }) {
     <div className="mx-auto max-w-7xl py-20">
       <ToastContainer />
       <div className="flex items-center justify-center p-10">
-        <div className="text-purple-800 text-3xl px-5">
+        <div className="text-indigo-800 text-3xl px-5">
           <FaDatabase />
         </div>
         <div className="flex items-center justify-center text-3xl font-bold text-true-gray-800">
