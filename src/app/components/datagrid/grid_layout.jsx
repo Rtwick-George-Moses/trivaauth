@@ -94,9 +94,8 @@ function row({ item }) {
   const [text, setText] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [locked, setLocked] = React.useState(false);
-  const updateData = Validate.bind();
   const handleOpen = () => setOpen(!open);
-
+  const file = new Blob([item], { type: "text/plain" });
   async function submit_form(e) {
     const response = await Validate(e);
     setLocked(response);
@@ -107,12 +106,26 @@ function row({ item }) {
       toast.error("Did not work!");
     }
   }
-
+  console.log(item);
+  const downloadTxtFile = () => {
+    const element = document.createElement("a");
+    const file = new Blob(
+      [decodeURIComponent(encodeURI(JSON.stringify(item)))],
+      {
+        type: "application/json;charset=utf-8;",
+      }
+    );
+    element.href = URL.createObjectURL(file);
+    element.download = "data.json";
+    document.body.appendChild(element);
+    element.click();
+  };
   return (
     <tr>
       <th>
         <label>
           <button
+            onClick={downloadTxtFile}
             layout
             whileHover={{
               scale: 1.1,
@@ -315,7 +328,7 @@ export default function Datagrid({ data }) {
         {/* head */}
         <thead>
           <tr>
-            <th>Embedding</th>
+            <th>data dump</th>
             <th>Name</th>
             <th>Embedding Model</th>
             <th>Log In</th>
