@@ -101,6 +101,7 @@ function row({ item }) {
     const response = await Validate(e);
     setLocked(response);
     if (response == true) {
+      handleOpen();
       toast.success("congrats you are logged in!");
     } else {
       toast.error("Did not work!");

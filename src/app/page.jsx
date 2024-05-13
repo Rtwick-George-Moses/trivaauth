@@ -6,6 +6,8 @@ import Hero from "./components/Hero";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <div className=" dark:bg-neutral-700 ">
