@@ -40,8 +40,7 @@ export default function Feature() {
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600 text-justify">
                 Remembering passwords are a pain, remembering your opinion on a
-                subject is not, so we try and use that to lock a account using
-                this approach.
+                subject is not, so we try and use that to secure an account.
               </p>
 
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
